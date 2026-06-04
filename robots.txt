@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://contest.kaylarockett.com/sitemap.xml

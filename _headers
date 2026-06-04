@@ -1,0 +1,3 @@
+# Netlify cache rules — always revalidate so a refresh pulls the latest.
+/*
+  Cache-Control: public, max-age=0, must-revalidate

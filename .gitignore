@@ -1,0 +1,13 @@
+.DS_Store
+*.DS_Store
+.netlify
+
+# Dev artifacts — not part of the deployed site
+preview-*.png
+PUBLISH.md
+
+# macOS / iCloud copy-conflict duplicates (e.g. "hero 2.mp4")
+* *.jpg
+* *.jpeg
+* *.png
+* *.mp4
