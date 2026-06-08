@@ -639,6 +639,10 @@
   .hb-lp-head h3{font-size:clamp(1.1rem,2.6vw,1.5rem);font-weight:700;white-space:nowrap;margin:0}
   .hb-live{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background:var(--pink);color:#0b0b0c;padding:4px 11px;border-radius:999px}
   .hb-lp-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .hb-series-head{display:flex;align-items:center;gap:14px;margin:32px 0 18px}
+  .hb-series-head h3{font-size:clamp(1.1rem,2.6vw,1.5rem);font-weight:700;white-space:nowrap;margin:0}
+  .hb-series-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .hb-rcard .dt{font-size:14px;font-weight:700;color:var(--text);margin:4px 0 8px}
   .hb-lp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
   .hb-lp-grid figure{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
   .hb-lp-grid figure:hover{border-color:var(--pink)}
@@ -754,12 +758,23 @@
           <span class="reel-play-label">Watch the reel &middot; 0:34</span>
         </button>
       </div>
+      <div class="hb-series-head"><h3>Honey Birdette &times; Playboy Series</h3></div>
       <div class="shoot-grid">
         <figure><img src="images/ev-pink.jpg" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-blue.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-cheetah.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette set with a masquerade mask" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-red.jpg" alt="Kayla Rockett in a red strappy Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-black.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set with lace gloves" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+      </div>
+      <div class="hb-next">
+        <h3>Release Schedule</h3>
+        <div class="hb-rounds">
+          <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Group round 1</div><div class="nm">Light pink</div><div class="dt">Jun 8</div><div class="st">Live now</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Group round 2</div><div class="nm">Blue</div><div class="dt">Jun 19</div><div class="st">Upcoming</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Group round 3</div><div class="nm">Leopard</div><div class="dt">Jun 26</div><div class="st">Upcoming</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#d8324f"></div><div class="rn">Group round 4</div><div class="nm">Red</div><div class="dt">Jun 30</div><div class="st">Upcoming</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Group finals</div><div class="nm">Black</div><div class="dt">Jul 6</div><div class="st">Upcoming</div></div>
+        </div>
       </div>
       <div class="hb-lp">
         <div class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live">Live now</span></div>
@@ -776,16 +791,6 @@
           <figure><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-        </div>
-      </div>
-      <div class="hb-next">
-        <h3>Coming next</h3>
-        <div class="hb-rounds">
-          <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Round 1</div><div class="nm">Light pink</div><div class="st">Live now</div></div>
-          <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Next</div><div class="nm">Blue</div><div class="st">Unlocks soon</div></div>
-          <div class="hb-rcard"><div class="hb-swatch" style="background:#d8324f"></div><div class="rn">Next</div><div class="nm">Red</div><div class="st">Unlocks soon</div></div>
-          <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Next</div><div class="nm">Leopard</div><div class="st">Unlocks soon</div></div>
-          <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Next</div><div class="nm">Black</div><div class="st">Unlocks soon</div></div>
         </div>
       </div>
       <div class="shoot-more">
