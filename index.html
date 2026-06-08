@@ -634,6 +634,28 @@
   .shoot-grid img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
   @media(max-width:1040px){.shoot-grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:620px){.shoot-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+  .hb-lp{margin-top:30px;border-top:1px solid var(--line);padding-top:30px}
+  .hb-lp-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .hb-lp-head h3{font-size:clamp(1.1rem,2.6vw,1.5rem);font-weight:700;white-space:nowrap;margin:0}
+  .hb-live{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background:var(--pink);color:#0b0b0c;padding:4px 11px;border-radius:999px}
+  .hb-lp-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .hb-lp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .hb-lp-grid figure{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
+  .hb-lp-grid figure:hover{border-color:var(--pink)}
+  .hb-lp-grid img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:2/3}
+  @media(max-width:900px){.hb-lp-grid{grid-template-columns:repeat(4,1fr)}}
+  @media(max-width:560px){.hb-lp-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
+  .hb-next{margin-top:34px}
+  .hb-next h3{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700;margin:0 0 16px;color:var(--muted)}
+  .hb-rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .hb-rcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
+  .hb-rcard.on{border-color:var(--pink)}
+  .hb-swatch{width:38px;height:38px;border-radius:50%;margin:0 auto 10px;border:2px solid rgba(255,255,255,.22)}
+  .hb-rcard .rn{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .hb-rcard .nm{font-weight:700;font-size:15px;margin:3px 0 8px}
+  .hb-rcard .st{font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+  .hb-rcard.on .st{color:var(--pink-soft)}
+  @media(max-width:620px){.hb-rounds{grid-template-columns:repeat(2,1fr)}}
   .reel-wrap{position:relative;max-width:760px;margin:0 auto 34px;border:1px solid var(--line);background:#000;overflow:hidden}
   .reel-video{display:block;width:100%;aspect-ratio:960/780;object-fit:cover;background:#000}
   .reel-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.12));border:0;cursor:pointer;color:#fff;font-family:inherit;transition:background .3s}
@@ -721,7 +743,7 @@
       <div class="sec-head">
         <div class="eyebrow">May 2026 · Honey Birdette × Playboy</div>
         <h2>Fresh from the <em>shoot.</em></h2>
-        <p>The reel, plus five selects from the May 2026 lookbook. The editorial direction I'm pitching: blue sequins and leopard print, all in a lo-fi VHS edit. Vote daily so Kayla becomes the face of the Collection.</p>
+        <p>The reel, five evergreen selects, and the full light pink set below, round 1 of the drop, with a new set every round. The editorial direction I'm pitching: blue sequins and leopard print, all in a lo-fi VHS edit. Vote daily so Kayla becomes the face of the Collection.</p>
       </div>
       <div class="reel-wrap" id="reelWrap">
         <video class="reel-video" id="reelVideo" playsinline preload="none" poster="video/reel-poster.jpg">
@@ -738,6 +760,33 @@
         <figure><img src="images/ev-cheetah.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette set with a masquerade mask" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-red.jpg" alt="Kayla Rockett in a red strappy Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         <figure><img src="images/ev-black.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set with lace gloves" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+      </div>
+      <div class="hb-lp">
+        <div class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live">Live now</span></div>
+        <div class="hb-lp-grid">
+          <figure><img src="images/hb-lp-01.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-02.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+        </div>
+      </div>
+      <div class="hb-next">
+        <h3>Coming next</h3>
+        <div class="hb-rounds">
+          <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Round 1</div><div class="nm">Light pink</div><div class="st">Live now</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Next</div><div class="nm">Blue</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#d8324f"></div><div class="rn">Next</div><div class="nm">Red</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Next</div><div class="nm">Leopard</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Next</div><div class="nm">Black</div><div class="st">Unlocks soon</div></div>
+        </div>
       </div>
       <div class="shoot-more">
         <a href="https://kaylarockett.com" target="_blank" rel="noopener" class="btn-ghost">See Kayla&#39;s full portfolio &rarr;</a>
