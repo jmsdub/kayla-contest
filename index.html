@@ -643,12 +643,20 @@
   .hb-series-head h3{font-size:clamp(1.1rem,2.6vw,1.5rem);font-weight:700;white-space:nowrap;margin:0}
   .hb-series-head::after{content:"";flex:1;height:1px;background:var(--line)}
   .hb-rcard .dt{font-size:14px;font-weight:700;color:var(--text);margin:4px 0 8px}
-  .hb-lp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .hb-lp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
   .hb-lp-grid figure{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
   .hb-lp-grid figure:hover{border-color:var(--pink)}
   .hb-lp-grid img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:2/3}
-  @media(max-width:900px){.hb-lp-grid{grid-template-columns:repeat(4,1fr)}}
-  @media(max-width:560px){.hb-lp-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
+  .lp-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .hb-lp-grid .lp-extra{display:none}
+  .lp-toggle:checked~.hb-lp-grid .lp-extra{display:block}
+  .lp-more{display:flex;align-items:center;gap:8px;width:fit-content;margin:18px auto 0;cursor:pointer;padding:11px 26px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:rgba(255,255,255,.03);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:border-color .25s,color .25s}
+  .lp-more:hover{border-color:var(--pink);color:var(--pink)}
+  .lp-more-hide{display:none}
+  .lp-toggle:checked~.lp-more .lp-more-show{display:none}
+  .lp-toggle:checked~.lp-more .lp-more-hide{display:inline}
+  @media(max-width:1040px){.hb-lp-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:620px){.hb-lp-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
   .hb-next{margin-top:34px}
   .hb-next h3{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700;margin:0 0 16px;color:var(--muted)}
   .hb-rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
@@ -778,20 +786,25 @@
       </div>
       <div class="hb-lp">
         <div class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live">Live now</span></div>
+        <input type="checkbox" id="lpToggle" class="lp-toggle">
         <div class="hb-lp-grid">
           <figure><img src="images/hb-lp-01.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-02.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-13.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-14.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-15.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
         </div>
+        <label for="lpToggle" class="lp-more"><span class="lp-more-show">Show all 15 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
       </div>
       <div class="shoot-more">
         <a href="https://kaylarockett.com" target="_blank" rel="noopener" class="btn-ghost">See Kayla&#39;s full portfolio &rarr;</a>
