@@ -1232,13 +1232,13 @@
         var ed = new Date(current.end);
         var dl = daysBetween(now, ed);
         k1.textContent = 'Current round'; v1.innerHTML = current.short;
-        k2.textContent = 'Round closes'; v2.innerHTML = fmtMon[ed.getMonth()] + ' <em>' + ed.getDate() + '</em>';
+        k2.textContent = 'Round closes'; v2.innerHTML = monNumToShort(ed) + ' <em>' + fmtMonNum(ed) + '</em>';
         k3.textContent = current.num === 0 ? 'Days left' : 'Need to advance';
         v3.innerHTML = current.num === 0 ? '<em>' + dl + '</em>' : '<em>' + current.cut + '</em>';
       } else {
         var sd = new Date(active.start);
         k1.textContent = 'Next round'; v1.innerHTML = active.short;
-        k2.textContent = 'Opens'; v2.innerHTML = fmtMon[sd.getMonth()] + ' <em>' + sd.getDate() + '</em>';
+        k2.textContent = 'Opens'; v2.innerHTML = monNumToShort(sd) + ' <em>' + fmtMonNum(sd) + '</em>';
         k3.textContent = 'Need to advance'; v3.innerHTML = '<em>' + active.cut + '</em>';
       }
     }
@@ -1281,6 +1281,19 @@
       ctaEy.textContent = 'Round opens soon';
       ctaP.innerHTML = nextOpen.short + ' opens <b>' + fmtDay(new Date(nextOpen.start)) + '</b>. Bookmark this page now.';
     }
+
+    // Release Schedule cards — live now / out now / upcoming, by round timing
+    document.querySelectorAll('.hb-rcard').forEach(function(el){
+      var rnEl = el.querySelector('.rn'), st = el.querySelector('.st');
+      if (!rnEl || !st) return;
+      var r = ROUNDS.find(function(x){ return x.name === rnEl.textContent.trim(); });
+      if (!r) return;
+      var s = new Date(r.start), e = new Date(r.end);
+      el.classList.remove('on');
+      if (now >= s && now < e){ el.classList.add('on'); st.textContent = 'Live now'; }
+      else if (now >= e){ st.textContent = 'Out now'; }
+      else { st.textContent = 'Upcoming'; }
+    });
   })();
 
   var copyBtn = document.getElementById('copyBtn');
