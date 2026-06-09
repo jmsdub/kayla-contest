@@ -1181,6 +1181,7 @@
       }
     };
     var daysBetween = function(a,b){ return Math.max(0, Math.ceil((b - a) / 86400000)); };
+    var daysLeft = function(a,b){ return Math.max(0, Math.floor((b - a) / 86400000)); };
     var hoursBetween = function(a,b){ return Math.max(0, Math.ceil((b - a) / 3600000)); };
 
     // Short labels for the mobile banner — keep round badge under ~10 chars
@@ -1209,12 +1210,12 @@
     var bannerEl = document.getElementById('bannerRound');
     if (current){
       var endDt = new Date(current.end);
-      var dleft = daysBetween(now, endDt);
+      var dleft = daysLeft(now, endDt);
       var hleft = hoursBetween(now, endDt);
       var label = current.num === 0 ? 'Registration' : current.short;
-      var leftBig = (dleft<=1 ? hleft : dleft);
-      var leftUnitBig = (dleft<=1 ? (hleft===1?'Hour':'Hours') : (dleft===1?'Day':'Days'));
-      var leftSmall = (dleft<=1 ? hleft+'h' : dleft+'d');
+      var leftBig = (dleft<1 ? hleft : dleft);
+      var leftUnitBig = (dleft<1 ? (hleft===1?'Hour':'Hours') : (dleft===1?'Day':'Days'));
+      var leftSmall = (dleft<1 ? hleft+'h' : dleft+'d');
       var dPill = '<span class="ct-round">' + label + '</span>';
       var mPill = '<span class="ct-round">' + roundShortMobile(current) + '</span>';
       bannerEl.innerHTML =
@@ -1241,7 +1242,7 @@
     if (active){
       if (current){
         var ed = new Date(current.end);
-        var dl = daysBetween(now, ed);
+        var dl = daysLeft(now, ed);
         k1.textContent = 'Current round'; v1.innerHTML = current.short;
         k2.textContent = 'Round closes'; v2.innerHTML = monNumToShort(ed) + ' <em>' + fmtMonNum(ed) + '</em>';
         k3.textContent = current.num === 0 ? 'Days left' : 'Need to advance';
