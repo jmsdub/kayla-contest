@@ -648,6 +648,8 @@
   .shoot-grid figure{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
   .shoot-grid figure:hover{border-color:var(--pink);transform:translateY(-2px)}
   .shoot-grid img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;aspect-ratio:4/5}
+  .shoot-grid img[src*="ev-cheetah"]{object-position:50% 50%}
+  .shoot-grid img[src*="ev-black"]{object-position:50% 14%}
   @media(max-width:1040px){.shoot-grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:620px){.shoot-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
   .hb-lp{margin-top:30px;border-top:1px solid var(--line);padding-top:30px}
