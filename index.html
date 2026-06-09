@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDL55FRKDQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JDL55FRKDQ');
+</script>
 <title>Vote Kayla · Playboy × Honey Birdette · Face of the Collection</title>
 <meta name="description" content="Kayla Rockett is in the running to be the face of the exclusive Playboy × Honey Birdette Collection. Vote daily through July 28. Every vote enters you to win a Playboy party + $1k Honey Birdette spree and supports the Lynne Cohen Foundation." />
 <meta name="theme-color" content="#0b0b0b" />
@@ -1122,6 +1130,7 @@
     el.setAttribute('href', VOTE_URL);
     el.setAttribute('target', '_blank');
     el.setAttribute('rel', 'noopener');
+    el.addEventListener('click', function(){ if(window.gtag) gtag('event','vote_click',{link_url: VOTE_URL}); });
   });
 
   // Reserve body space equal to the fixed contest banner's height
