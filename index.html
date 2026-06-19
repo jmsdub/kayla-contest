@@ -137,16 +137,15 @@
     font-family:'Jost',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
   }
   @media (max-width:640px){header.nav .right a.back{display:none}}
-  header.nav .right .ob-nav{display:inline-flex;align-items:center;gap:9px}
-  header.nav .right .ob-nav .ob-nav-lbl{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-  header.nav .right .ob-nav img{height:20px;width:auto;display:block}
-  header.nav .right .ob-nav:hover img{filter:brightness(1.12)}
+  header.nav .ob-nav{display:inline-flex;align-items:center;gap:10px}
+  header.nav .ob-nav .ob-nav-lbl{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  header.nav .ob-nav img{height:22px;width:auto;display:block}
+  header.nav .ob-nav:hover img{filter:brightness(1.12)}
   @media (max-width:640px){
-    header.nav .right .ob-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);gap:0}
-    header.nav .right .ob-nav .ob-nav-lbl{display:none}
-    header.nav .right .ob-nav img{height:17px}
+    header.nav .ob-nav .ob-nav-lbl{display:none}
+    header.nav .ob-nav img{height:18px}
   }
-  @media (max-width:360px){header.nav .right .ob-nav{display:none}}
+  @media (max-width:360px){header.nav .ob-nav{display:none}}
 
   /* ===== Hero ===== */
   .hero{
@@ -739,8 +738,8 @@
   <!-- ===== Nav ===== -->
   <header class="nav">
     <a href="https://kaylarockett.com" class="brand">Kayla<span>·</span>Rockett</a>
+    <a class="ob-nav" href="https://orbiiit.com/" target="_blank" rel="noopener"><span class="ob-nav-lbl">Hosted on</span><img src="images/orbiiit-logo.png" alt="Orbiiit" /></a>
     <div class="right">
-      <a class="ob-nav" href="https://orbiiit.com/" target="_blank" rel="noopener"><span class="ob-nav-lbl">Hosted on</span><img src="images/orbiiit-logo.png" alt="Orbiiit" /></a>
       <a class="back" href="https://kaylarockett.com">← Portfolio</a>
       <a class="vote" data-vote-link href="#">Vote now</a>
     </div>
