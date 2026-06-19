@@ -137,6 +137,16 @@
     font-family:'Jost',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
   }
   @media (max-width:640px){header.nav .right a.back{display:none}}
+  header.nav .right .ob-nav{display:inline-flex;align-items:center;gap:9px}
+  header.nav .right .ob-nav .ob-nav-lbl{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  header.nav .right .ob-nav img{height:20px;width:auto;display:block}
+  header.nav .right .ob-nav:hover img{filter:brightness(1.12)}
+  @media (max-width:640px){
+    header.nav .right .ob-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);gap:0}
+    header.nav .right .ob-nav .ob-nav-lbl{display:none}
+    header.nav .right .ob-nav img{height:17px}
+  }
+  @media (max-width:360px){header.nav .right .ob-nav{display:none}}
 
   /* ===== Hero ===== */
   .hero{
@@ -515,9 +525,9 @@
     .contest-banner .pill{padding:7px 12px;font-size:10px;letter-spacing:.16em}
 
     /* --- Nav: tighten --- */
-    header.nav{padding:14px 18px}
-    header.nav .brand{font-size:15px;letter-spacing:.24em}
-    header.nav .right a.vote{padding:9px 14px;font-size:10px;letter-spacing:.18em}
+    header.nav{padding:14px 16px}
+    header.nav .brand{font-size:13px;letter-spacing:.12em}
+    header.nav .right a.vote{padding:8px 12px;font-size:10px;letter-spacing:.14em}
 
     /* --- Hero lockup: shrink and allow wrap if needed --- */
     .hero{min-height:auto}
@@ -730,6 +740,7 @@
   <header class="nav">
     <a href="https://kaylarockett.com" class="brand">Kayla<span>·</span>Rockett</a>
     <div class="right">
+      <a class="ob-nav" href="https://orbiiit.com/" target="_blank" rel="noopener"><span class="ob-nav-lbl">Hosted on</span><img src="images/orbiiit-logo.png" alt="Orbiiit" /></a>
       <a class="back" href="https://kaylarockett.com">← Portfolio</a>
       <a class="vote" data-vote-link href="#">Vote now</a>
     </div>
@@ -783,7 +794,7 @@
       <div class="sec-head">
         <div class="eyebrow">May 2026 · Honey Birdette × Playboy</div>
         <h2>Fresh from the <em>shoot.</em></h2>
-        <p>The reel is my pitch for the Collection's editorial direction: blue sequins and leopard print in a lo-fi VHS edit. Below it, one hero shot from each of the five sets, then the full blue set from round 2. A new set drops every round. Vote each round and help me become the face of the Collection.</p>
+        <p>The reel is my pitch for the Collection's editorial direction: blue sequins and leopard print in a lo-fi VHS edit. Below it, one hero shot from each of the five sets, then the full gallery from every round released so far, newest first. A new set drops every round. Vote each round and help me become the face of the Collection.</p>
       </div>
       <div class="reel-wrap" id="reelWrap">
         <video class="reel-video" id="reelVideo" playsinline preload="none" poster="video/reel-poster.jpg">
@@ -832,6 +843,28 @@
           <figure class="lp-extra"><img src="images/hb-blue-14.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
         </div>
         <label for="lpToggle" class="lp-more"><span class="lp-more-show">Show all 14 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
+      </div>
+      <div class="hb-lp">
+        <div class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
+        <input type="checkbox" id="lpTogglePink" class="lp-toggle">
+        <div class="hb-lp-grid">
+          <figure><img src="images/hb-lp-01.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-02.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-13.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-14.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-15.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+        </div>
+        <label for="lpTogglePink" class="lp-more"><span class="lp-more-show">Show all 15 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
       </div>
       <div class="shoot-more">
         <a href="https://kaylarockett.com" target="_blank" rel="noopener" class="btn-ghost">See Kayla&#39;s full portfolio &rarr;</a>
