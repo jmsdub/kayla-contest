@@ -685,10 +685,10 @@
   .hb-arch .hb-mark{display:block;height:clamp(26px,4.6vw,42px);width:auto;margin:20px auto 0;filter:brightness(0) invert(1);opacity:.9}
   .hb-arch-gallery{position:relative}
   @media(max-width:620px){.hb-lp-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
-  /* Hide 5th visible gallery photo on mobile → 4 shown = 2 clean rows of 2 */
+  /* Hide 1st gallery photo on mobile (hero, already visible in schedule block above) → 4 shown = 2×2 */
   @media(max-width:620px){
-    .hb-lp-grid > figure:nth-child(5){display:none}
-    .lp-toggle:checked ~ .hb-lp-grid > figure:nth-child(5){display:block}
+    .hb-lp-grid > figure:nth-child(1){display:none}
+    .lp-toggle:checked ~ .hb-lp-grid > figure:nth-child(1){display:block}
   }
   .hb-next{margin-top:34px}
   .hb-next h3{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700;margin:0 0 16px;color:#fff}
