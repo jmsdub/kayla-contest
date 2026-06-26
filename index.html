@@ -725,8 +725,16 @@
   .hb-sched-photo{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
   .hb-sched-photo:hover{border-color:var(--pink);transform:translateY(-2px)}
   .hb-sched-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;aspect-ratio:4/5}
+  a.hb-sched-photo{display:block;text-decoration:none}
+  .hb-sched-photo img[src*="contest-02"]{transform:scale(1.2);transform-origin:50% 15%}
   .hb-sched-photo img[src*="contest-03"]{object-position:50% 50%}
-  .hb-sched-photo img[src*="contest-05"]{object-position:50% 30%}
+  .hb-sched-photo img[src*="contest-05"]{object-position:50% 20%;transform:scale(1.2);transform-origin:50% 20%}
+  /* Lightbox */
+  #lb{position:fixed;inset:0;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer}
+  #lb[hidden]{display:none}
+  #lb-img{max-width:92vw;max-height:92vh;object-fit:contain;cursor:default;pointer-events:none;display:block}
+  #lb-x{position:absolute;top:16px;right:20px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;opacity:.55;line-height:1;padding:8px}
+  #lb-x:hover{opacity:1}
   @media(max-width:620px){
     .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:stretch;gap:10px}
     .hb-sched-block .hb-rcard{display:flex;flex-direction:column;justify-content:center}
@@ -832,15 +840,15 @@
           <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Group round 3</div><div class="nm">Leopard</div><div class="dt">Jun 26</div><div class="st">Upcoming</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#ff2d72"></div><div class="rn">Group round 4</div><div class="nm">Hot pink</div><div class="dt">Jun 30</div><div class="st">Upcoming</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Group finals</div><div class="nm">Black</div><div class="dt">Jul 6</div><div class="st">Upcoming</div></div>
-          <figure class="hb-sched-photo"><img src="images/contest-01.jpg" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure class="hb-sched-photo"><img src="images/contest-02.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <a class="hb-sched-photo" href="#hb-round-1"><img src="images/contest-01.jpg" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
+          <a class="hb-sched-photo" href="#hb-round-2"><img src="images/contest-02.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
           <figure class="hb-sched-photo"><img src="images/contest-03.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="hb-sched-photo"><img src="images/contest-04.jpg" alt="Kayla Rockett in a hot pink strappy Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="hb-sched-photo"><img src="images/contest-05.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
         </div>
       </div>
       <div class="hb-lp">
-        <div class="hb-lp-head"><h3>Round 2 &middot; Blue</h3><span class="hb-live">Live now</span></div>
+        <div id="hb-round-2" class="hb-lp-head"><h3>Round 2 &middot; Blue</h3><span class="hb-live">Live now</span></div>
         <input type="checkbox" id="lpToggle" class="lp-toggle">
         <div class="hb-lp-grid">
           <figure><img src="images/hb-blue-01.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
@@ -861,7 +869,7 @@
         <label for="lpToggle" class="lp-more"><span class="lp-more-show">Show all 14 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
       </div>
       <div class="hb-lp">
-        <div class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
+        <div id="hb-round-1" class="hb-lp-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
         <input type="checkbox" id="lpTogglePink" class="lp-toggle">
         <div class="hb-lp-grid">
           <figure><img src="images/hb-lp-01.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
@@ -1373,6 +1381,40 @@
   (function(){
     var w=document.getElementById('reelWrap'),v=document.getElementById('reelVideo'),b=document.getElementById('reelPlay');
     if(w&&v&&b){b.addEventListener('click',function(){v.setAttribute('controls','');w.classList.add('playing');v.play();});}
+  })();
+  </script>
+  <script>
+  (function(){
+    document.documentElement.style.scrollBehavior='smooth';
+    /* Lightbox */
+    var lb=document.createElement('div');lb.id='lb';lb.hidden=true;
+    lb.innerHTML='<button id="lb-x" aria-label="Close">&#x2715;</button><img id="lb-img" alt="">';
+    document.body.appendChild(lb);
+    var lbI=document.getElementById('lb-img'),lbX=document.getElementById('lb-x');
+    function lbOpen(src){lbI.src=src;lb.hidden=false;document.body.style.overflow='hidden';}
+    function lbClose(){lb.hidden=true;document.body.style.overflow='';}
+    lb.addEventListener('click',function(e){if(e.target!==lbI)lbClose();});
+    lbX.addEventListener('click',function(e){e.stopPropagation();lbClose();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
+    /* Gallery photos → lightbox */
+    document.querySelectorAll('.hb-lp .hb-lp-grid figure,.hb-lp .hb-lp-grid a').forEach(function(el){
+      el.style.cursor='zoom-in';
+      el.addEventListener('click',function(e){e.preventDefault();lbOpen(el.querySelector('img').src);});
+    });
+    /* Schedule heroes → scroll + expand gallery */
+    document.querySelectorAll('a.hb-sched-photo').forEach(function(a){
+      var href=a.getAttribute('href');
+      if(href&&href[0]==='#'){
+        a.addEventListener('click',function(){
+          var target=document.querySelector(href);
+          if(target){
+            var container=target.closest('.hb-lp')||target;
+            var tog=container.querySelector('.lp-toggle');
+            if(tog)setTimeout(function(){tog.checked=true;},500);
+          }
+        });
+      }
+    });
   })();
   </script>
 </body>
