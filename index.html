@@ -715,6 +715,20 @@
   .ob-credit img{height:30px;width:auto;display:block}
   .ob-credit:hover img{filter:brightness(1.12)}
   footer.foot .ob-credit{display:flex;justify-content:center;margin:26px 0 14px}
+
+  /* ===== Schedule + Series heroes combined block ===== */
+  .hb-sched-block{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .hb-sched-photo{margin:0;background:#000;overflow:hidden;border:1px solid var(--line);transition:.25s}
+  .hb-sched-photo:hover{border-color:var(--pink);transform:translateY(-2px)}
+  .hb-sched-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;aspect-ratio:4/5}
+  .hb-sched-photo img[src*="ev-cheetah"]{object-position:50% 50%}
+  .hb-sched-photo img[src*="ev-black"]{object-position:50% 30%}
+  @media(max-width:620px){
+    .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:start;gap:10px}
+  }
+  /* Tighten gap between shoot section and archive */
+  section.s.shoot{padding-bottom:40px}
+  section.s.hb-arch{padding-top:40px}
 </style>
 </head>
 <body>
@@ -804,22 +818,19 @@
           <span class="reel-play-label">Watch the reel &middot; 0:34</span>
         </button>
       </div>
-      <div class="hb-series-head"><h3>Honey Birdette &times; Playboy Series</h3></div>
-      <div class="shoot-grid">
-        <figure><img src="images/ev-pink.jpg" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
-        <figure><img src="images/ev-blue.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
-        <figure><img src="images/ev-cheetah.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
-        <figure><img src="images/ev-red.jpg" alt="Kayla Rockett in a hot pink strappy Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
-        <figure><img src="images/ev-black.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
-      </div>
       <div class="hb-next">
-        <h3>Release Schedule</h3>
-        <div class="hb-rounds">
+        <h3>Honey Birdette &times; Playboy Series</h3>
+        <div class="hb-sched-block">
           <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Group round 1</div><div class="nm">Light pink</div><div class="dt">Jun 8</div><div class="st">Live now</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Group round 2</div><div class="nm">Blue</div><div class="dt">Jun 19</div><div class="st">Upcoming</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Group round 3</div><div class="nm">Leopard</div><div class="dt">Jun 26</div><div class="st">Upcoming</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#ff2d72"></div><div class="rn">Group round 4</div><div class="nm">Hot pink</div><div class="dt">Jun 30</div><div class="st">Upcoming</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Group finals</div><div class="nm">Black</div><div class="dt">Jul 6</div><div class="st">Upcoming</div></div>
+          <figure class="hb-sched-photo"><img src="images/ev-pink.jpg" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+          <figure class="hb-sched-photo"><img src="images/ev-blue.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+          <figure class="hb-sched-photo"><img src="images/ev-cheetah.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+          <figure class="hb-sched-photo"><img src="images/ev-red.jpg" alt="Kayla Rockett in a hot pink strappy Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
+          <figure class="hb-sched-photo"><img src="images/ev-black.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="1280" height="1920" /></figure>
         </div>
       </div>
       <div class="hb-lp">
@@ -831,7 +842,7 @@
           <figure><img src="images/hb-blue-03.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-blue-04.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-blue-05.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure class="lp-extra"><img src="images/hb-blue-06.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-blue-06.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-07.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-08.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-09.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
@@ -852,7 +863,7 @@
           <figure><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure class="lp-extra"><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
@@ -1267,15 +1278,15 @@
       if (current){
         var ed = new Date(current.end);
         var dl = daysLeft(now, ed);
-        k1.textContent = 'Current round'; v1.innerHTML = current.short;
+        k1.textContent = 'Current round'; v1.innerHTML = current.short.replace(/(\d+)/, '<em>$1</em>');
         k2.textContent = 'Round closes'; v2.innerHTML = monNumToShort(ed) + ' <em>' + fmtMonNum(ed) + '</em>';
         k3.textContent = current.num === 0 ? 'Days left' : 'Need to advance';
-        v3.innerHTML = current.num === 0 ? '<em>' + dl + '</em>' : '<em>' + current.cut + '</em>';
+        v3.innerHTML = current.num === 0 ? '<em>' + dl + '</em>' : current.cut.replace(/(\d+)/, '<em>$1</em>');
       } else {
         var sd = new Date(active.start);
-        k1.textContent = 'Next round'; v1.innerHTML = active.short;
+        k1.textContent = 'Next round'; v1.innerHTML = active.short.replace(/(\d+)/, '<em>$1</em>');
         k2.textContent = 'Opens'; v2.innerHTML = monNumToShort(sd) + ' <em>' + fmtMonNum(sd) + '</em>';
-        k3.textContent = 'Need to advance'; v3.innerHTML = '<em>' + active.cut + '</em>';
+        k3.textContent = 'Need to advance'; v3.innerHTML = active.cut.replace(/(\d+)/, '<em>$1</em>');
       }
     }
 
