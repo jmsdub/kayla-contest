@@ -684,10 +684,14 @@
   .lp-toggle:checked~.lp-more .lp-more-hide{display:inline}
   .hb-arch .hb-mark{display:block;height:clamp(26px,4.6vw,42px);width:auto;margin:20px auto 0;filter:brightness(0) invert(1);opacity:.9}
   .hb-arch-gallery{position:relative}
-  @media(max-width:1040px){.hb-lp-grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:620px){.hb-lp-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+  /* Hide 5th visible gallery photo on mobile → 4 shown = 2 clean rows of 2 */
+  @media(max-width:620px){
+    .hb-lp-grid > figure:nth-child(5){display:none}
+    .lp-toggle:checked ~ .hb-lp-grid > figure:nth-child(5){display:block}
+  }
   .hb-next{margin-top:34px}
-  .hb-next h3{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700;margin:0 0 16px;color:var(--muted)}
+  .hb-next h3{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700;margin:0 0 16px;color:#fff}
   .hb-rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
   .hb-rcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
   .hb-rcard.on{border-color:var(--pink)}
@@ -819,7 +823,7 @@
         </button>
       </div>
       <div class="hb-next">
-        <h3>Honey Birdette &times; Playboy Series</h3>
+        <h3>Honey Birdette &times; Playboy Series Release Schedule</h3>
         <div class="hb-sched-block">
           <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Group round 1</div><div class="nm">Light pink</div><div class="dt">Jun 8</div><div class="st">Live now</div></div>
           <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Group round 2</div><div class="nm">Blue</div><div class="dt">Jun 19</div><div class="st">Upcoming</div></div>
@@ -842,7 +846,7 @@
           <figure><img src="images/hb-blue-03.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-blue-04.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-blue-05.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-blue-06.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-blue-06.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-07.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-08.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-blue-09.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
@@ -863,7 +867,7 @@
           <figure><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
-          <figure><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
+          <figure class="lp-extra"><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
           <figure class="lp-extra"><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></figure>
