@@ -728,7 +728,8 @@
   .hb-sched-photo img[src*="ev-cheetah"]{object-position:50% 50%}
   .hb-sched-photo img[src*="ev-black"]{object-position:50% 30%}
   @media(max-width:620px){
-    .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:start;gap:10px}
+    .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:stretch;gap:10px}
+    .hb-sched-block .hb-rcard{display:flex;flex-direction:column;justify-content:center}
   }
   /* Tighten gap between shoot section and archive */
   section.s.shoot{padding-bottom:40px}
